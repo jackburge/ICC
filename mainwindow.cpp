@@ -9,9 +9,6 @@ MainWindow::MainWindow(QWidget *parent) :
     serialPorts = new SerialPorts();
     timer = new QTimer(this);
     ui->setupUi(this);
-//    ui->mainToolBar->hide();
-//    ui->menuBar->hide();
-//    ui->statusBar->hide();
     connect(timer, SIGNAL(timeout()), this, SLOT(tick()));
     timer->start(1000);
 }
